@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-from cli import welcome_user
+import sys
+sys.path.append('/home/malina/python-project-49/brain_games')
+import cli
 
 
 def main():
     print("Welcome to the Brain Games!")
-    welcome_user()
+    cli.welcome_user()
 
 
 if __name__ == '__main__':
