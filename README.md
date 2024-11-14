@@ -1,2 +1,2 @@
 ### Hexlet tests and linter status:
-[![Actions Status](https://github.com/malina-prog/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/malina-prog/python-project-49/actions)
+[![Actions Status](https://github.com/malina-prog/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/malina-prog/python-project-49/actions)(https://asciinema.org/a/4rk2vtuBa8u1or0KUcLCfvATF)
