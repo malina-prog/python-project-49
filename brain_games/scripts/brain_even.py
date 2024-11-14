@@ -4,7 +4,9 @@ import sys
 sys.path.append('/home/malina/python-project-49/brain_games')
 import cli
 
-def brain_even():
+
+def main():
+    name = cli.welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')
     count = 0
     while count != 3:
@@ -24,7 +26,8 @@ def brain_even():
             print(f'{person_answer} is wrong answer ;(. Correct answer was {answer}')
             exit()
 
-    print(f'Congratulations, {cli.name}!')
+    print(f'Congratulations, {name}!')
 
 
-brain_even()
+if __name__ == '__main__':
+    main()
