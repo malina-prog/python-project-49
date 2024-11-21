@@ -1,13 +1,11 @@
 from random import randint
 import prompt
 import math
-import sys
-sys.path.append('/home/malina/python-project-49/brain_games')
-import cli
+from brain_games.cli import welcome_user
 
 
 def main():
-    name = cli.welcome_user()
+    name = welcome_user()
     print("Find the greatest common divisor of given numbers.")
     count = 0
     while count != 3:

@@ -1,9 +1,7 @@
 from random import randint
 import prompt
 import math
-import sys
-sys.path.append('/home/malina/python-project-49/brain_games')
-import cli
+from brain_games.cli import welcome_user
 
 
 def is_simple(n):
@@ -16,7 +14,7 @@ def is_simple(n):
 
 
 def main():
-    name = cli.welcome_user()
+    name = welcome_user()
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     count = 0
     while count != 3:

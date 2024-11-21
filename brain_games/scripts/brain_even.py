@@ -1,12 +1,10 @@
 from random import randint
 import prompt
-import sys
-sys.path.append('/home/malina/python-project-49/brain_games')
-import cli
+from brain_games.cli import welcome_user
 
 
 def main():
-    name = cli.welcome_user()
+    name = welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')
     count = 0
     while count != 3:

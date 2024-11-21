@@ -1,8 +1,6 @@
 from random import randint
 import prompt
-import sys
-sys.path.append('/home/malina/python-project-49/brain_games')
-import cli
+from brain_games.cli import welcome_user
 
 
 def progression():
@@ -19,7 +17,7 @@ def progression():
 
 
 def main():
-    name = cli.welcome_user()
+    name = welcome_user()
     print('What number is missing in the progression?')
     count = 0
     while count != 3:

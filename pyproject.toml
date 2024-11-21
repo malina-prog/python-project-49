@@ -1,8 +1,9 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "Five simple arithmetic games."
 authors = ["malina-prog <dima.sidol16@google.com>"]
+repository = "https://github.com/malina-prog/python-project-49"
 readme = "README.md"
 packages = [
 	{ include = "brain_games" },
