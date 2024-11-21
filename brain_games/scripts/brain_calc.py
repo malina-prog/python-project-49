@@ -15,17 +15,17 @@ def main():
             print(f'Question: {a} + {b}')
             answer = str(a + b)
             person_answer = prompt.string('Your answer: ')
-            count += test(answer, person_answer)
+            count += test(answer, person_answer, name)
         elif c == 2:
             print(f'Question: {a} - {b}')
             answer = str(a - b)
             person_answer = prompt.string('Your answer: ')
-            count += test(answer, person_answer)
+            count += test(answer, person_answer, name)
         elif c == 3:
             print(f'Question: {a} * {b}')
             answer = str(a * b)
             person_answer = prompt.string('Your answer: ')
-            count += test(answer, person_answer)
+            count += test(answer, person_answer, name)
     print(f'Congratulations, {name}!')
 
 
