@@ -3,16 +3,6 @@ import prompt
 from brain_games.cli import welcome_user
 
 
-def test(answer, person_answer):
-    if person_answer == answer:
-        print('Correct!')
-        return 1
-    else:
-        print(f"{person_answer} is wrong answer ;(. ", end='')
-        print(f'Correct answer was {answer}')
-        exit()
-
-
 def main():
     name = welcome_user()
     print('What is the result of the expression?')
@@ -37,6 +27,17 @@ def main():
             person_answer = prompt.string('Your answer: ')
             count += test(answer, person_answer)
     print(f'Congratulations, {name}!')
+
+
+def test(answer, person_answer, name):
+    if person_answer == answer:
+        print('Correct!')
+        return 1
+    else:
+        print(f"{person_answer} is wrong answer ;(. ", end='')
+        print(f'Correct answer was {answer}')
+        print(f"Let's try again, {name}!")
+        exit()
 
 
 if __name__ == '__main__':
