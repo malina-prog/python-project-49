@@ -1,6 +1,7 @@
 from random import randint
 import prompt
 from brain_games.cli import welcome_user
+from brain_games.scripts.games.game_test import test
 
 
 def main():
@@ -27,17 +28,6 @@ def main():
             person_answer = prompt.string('Your answer: ')
             count += test(answer, person_answer, name)
     print(f'Congratulations, {name}!')
-
-
-def test(answer, person_answer, name):
-    if person_answer == answer:
-        print('Correct!')
-        return 1
-    else:
-        print(f"{person_answer} is wrong answer ;(. ", end='')
-        print(f'Correct answer was {answer}')
-        print(f"Let's try again, {name}!")
-        exit()
 
 
 if __name__ == '__main__':

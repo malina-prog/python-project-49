@@ -2,6 +2,7 @@ from random import randint
 import prompt
 import math
 from brain_games.cli import welcome_user
+from brain_games.scripts.games.game_test import test
 
 
 def main():
@@ -14,14 +15,7 @@ def main():
         print(f'Question: {a} {b}')
         answer = str(math.gcd(a, b))
         person_answer = prompt.string('Your answer: ')
-        if person_answer == answer:
-            print('Correct!')
-            count += 1
-        else:
-            print(f"{person_answer} is wrong answer ;(. ", end='')
-            print(f'Correct answer was {answer}')
-            print(f"Let's try again, {name}!")
-            exit()
+        count += test(answer, person_answer, name)
     print(f'Congratulations, {name}!')
 
 
