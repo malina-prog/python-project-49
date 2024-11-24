@@ -9,6 +9,6 @@ Code climate (https://codeclimate.com/github/malina-prog/python-project-49)
 
 Description: This project contains five console games.Each game goes up to three correct answers, if you answer incorrectly, you lose.
 
-Minimum requirements:
+Minimum requirements: linux, python 3
 
 Installation and startup instructions:
