@@ -1,7 +1,6 @@
 from random import randint
 import math
-from brain_games.scripts.games.engine import welcome, print_question
-from brain_games.scripts.games.engine import comparison, congratulation
+from brain_games.scripts.games.engine import welcome, print_question, comparison, congratulation
 
 
 def main():

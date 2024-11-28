@@ -1,6 +1,5 @@
 from random import randint
-from brain_games.scripts.games.engine import welcome, print_question
-from brain_games.scripts.games.engine import comparison, congratulation
+from brain_games.scripts.games.engine import welcome, print_question, comparison, congratulation
 
 
 def progression():
