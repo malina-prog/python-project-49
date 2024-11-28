@@ -1,25 +1,22 @@
 from random import randint
-import prompt
-from brain_games.cli import welcome_user
-from brain_games.scripts.games.game_test import test
+from brain_games.scripts.games.engine import welcome, print_question
+from brain_games.scripts.games.engine import comparison, congratulation
 
 
 def main():
-    name = welcome_user()
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    game_quest = 'Answer "yes" if the number is even, otherwise answer "no".'
+    name = welcome(game_quest)
     count = 0
     while count != 3:
         a = randint(1, 100)
-        print(f'Question: {a}')
+        print_question(f'Question: {a}')
         if a % 2 == 0:
             answer = 'yes'
         else:
             answer = 'no'
 
-        person_answer = prompt.string('Your answer: ')
-        count += test(answer, person_answer, name)
-
-    print(f'Congratulations, {name}!')
+        count += comparison(answer, name)
+    congratulation(name)
 
 
 if __name__ == '__main__':

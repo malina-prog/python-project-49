@@ -1,7 +1,6 @@
 from random import randint
-import prompt
-from brain_games.cli import welcome_user
-from brain_games.scripts.games.game_test import test
+from brain_games.scripts.games.engine import welcome, print_question
+from brain_games.scripts.games.engine import comparison, congratulation
 
 
 def progression():
@@ -18,16 +17,15 @@ def progression():
 
 
 def main():
-    name = welcome_user()
-    print('What number is missing in the progression?')
+    game_quest = 'What number is missing in the progression?'
+    name = welcome(game_quest)
     count = 0
     while count != 3:
         question, answer = progression()
-        print('Question: ', end='')
-        print(*question, sep=' ')
-        person_answer = prompt.string('Your answer: ')
-        count += test(answer, person_answer, name)
-    print(f'Congratulations, {name}!')
+        q = str(' '.join(str(x) for x in question))
+        print_question(f'Question: {q}')
+        count += comparison(answer, name)
+    congratulation(name)
 
 
 if __name__ == '__main__':

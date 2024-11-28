@@ -1,22 +1,20 @@
 from random import randint
-import prompt
 import math
-from brain_games.cli import welcome_user
-from brain_games.scripts.games.game_test import test
+from brain_games.scripts.games.engine import welcome, print_question
+from brain_games.scripts.games.engine import comparison, congratulation
 
 
 def main():
-    name = welcome_user()
-    print("Find the greatest common divisor of given numbers.")
+    game_quest = "Find the greatest common divisor of given numbers."
+    name = welcome(game_quest)
     count = 0
     while count != 3:
         a = randint(1, 100)
         b = randint(1, 100)
-        print(f'Question: {a} {b}')
+        print_question(f'Question: {a} {b}')
         answer = str(math.gcd(a, b))
-        person_answer = prompt.string('Your answer: ')
-        count += test(answer, person_answer, name)
-    print(f'Congratulations, {name}!')
+        count += comparison(answer, name)
+    congratulation(name)
 
 
 if __name__ == '__main__':
