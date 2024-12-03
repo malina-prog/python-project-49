@@ -5,7 +5,7 @@ from brain_games.consts import COUNT_ROUNDS
 def run_game(get_question_and_answer, instruction):
     name = prompt.string('Welcome to the Brain Games!\n'
                          'May I have your name? ')
-    print(f'Helo, {name}!\n'
+    print(f'Hello, {name}!\n'
           f'{instruction}')
 
     for _ in range(COUNT_ROUNDS):
