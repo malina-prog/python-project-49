@@ -1,11 +1,12 @@
 from random import randint
-from brain_games.consts import BRAIN_EVEN_INSTRUCTION
+
+from brain_games.consts import BRAIN_PROGRESSION_INSTRUCTION
 from brain_games.engine import run_game
 
 
-def get_progression():
+def get_progression_and_miss_num() -> tuple[str, str]:
     start = randint(1, 70)
-    step = randint(1, 5)
+    step = randint(2, 7)
     progression_list = []
     for i in range(10):
         progression_list.append(start)
@@ -17,13 +18,5 @@ def get_progression():
     return progression_str, answer
 
 
-def get_progression_and_answer() -> tuple[str, str]:
-    progression, answer = get_progression()
-
-
 def run_progression_game():
-    run_game(get_progression_and_answer, BRAIN_PROGRESSION_INSTRUCTION)
-
-
-def test_func():
-    return get_progression_and_answer()
+    run_game(get_progression_and_miss_num, BRAIN_PROGRESSION_INSTRUCTION)

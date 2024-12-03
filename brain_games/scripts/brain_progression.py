@@ -2,7 +2,7 @@ from brain_games.games.progression import run_progression_game
 
 
 def main():
-    run_even_game()
+    run_progression_game()
 
 
 if __name__ == '__main__':
