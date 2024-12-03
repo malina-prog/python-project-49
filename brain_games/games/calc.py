@@ -1,6 +1,6 @@
 import random
 
-from brain_games.consts import BRAIN_CALC_INSTRUCTION, MATH_SIGNS
+from brain_games.consts import CALC_INSTRUCTION, MATH_SIGNS
 from brain_games.engine import run_game
 
 
@@ -13,4 +13,4 @@ def get_expression_and_answer() -> tuple[str, str]:
 
 
 def run_calc_game():
-    run_game(get_expression_and_answer, BRAIN_CALC_INSTRUCTION)
+    run_game(get_expression_and_answer, CALC_INSTRUCTION)

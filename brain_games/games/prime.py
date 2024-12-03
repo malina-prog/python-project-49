@@ -1,7 +1,7 @@
 import math
 from random import randint
 
-from brain_games.consts import BRAIN_PRIME_INSTRUCTION
+from brain_games.consts import PRIME_INSTRUCTION
 from brain_games.engine import run_game
 
 
@@ -21,4 +21,4 @@ def get_num_and_prime_ans() -> tuple[int, str]:
 
 
 def run_prime_game():
-    run_game(get_num_and_prime_ans, BRAIN_PRIME_INSTRUCTION)
+    run_game(get_num_and_prime_ans, PRIME_INSTRUCTION)

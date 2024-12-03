@@ -1,6 +1,6 @@
 import random
 
-from brain_games.consts import BRAIN_EVEN_INSTRUCTION
+from brain_games.consts import EVEN_INSTRUCTION
 from brain_games.engine import run_game
 
 
@@ -16,4 +16,4 @@ def get_num_and_even_ans() -> tuple[int, str]:
 
 
 def run_even_game():
-    run_game(get_num_and_even_ans, BRAIN_EVEN_INSTRUCTION)
+    run_game(get_num_and_even_ans, EVEN_INSTRUCTION)

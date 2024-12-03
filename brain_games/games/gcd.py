@@ -1,7 +1,7 @@
 import math
 from random import randint
 
-from brain_games.consts import BRAIN_GCD_INSTRUCTION
+from brain_games.consts import GCD_INSTRUCTION
 from brain_games.engine import run_game
 
 
@@ -13,4 +13,4 @@ def get_nums_and_gcd_ans() -> tuple[str, str]:
 
 
 def run_gcd_game():
-    run_game(get_nums_and_gcd_ans, BRAIN_GCD_INSTRUCTION)
+    run_game(get_nums_and_gcd_ans, GCD_INSTRUCTION)
