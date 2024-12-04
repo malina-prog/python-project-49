@@ -1,4 +1,5 @@
 import prompt
+
 from brain_games.consts import COUNT_ROUNDS
 
 
