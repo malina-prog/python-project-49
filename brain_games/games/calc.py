@@ -8,7 +8,7 @@ def get_expression_and_answer() -> tuple[str, str]:
     num1, num2 = random.randint(1, 100), random.randint(1, 100)
     math_sign = random.choice(MATH_SIGNS)
     expression = (f'{num1}{math_sign}{num2}')
-    answer = str(eval(f'{num1}{math_sign}{num2}'))
+    answer = str(eval(f'{num1} {math_sign} {num2}'))
     return expression, answer
 
 
